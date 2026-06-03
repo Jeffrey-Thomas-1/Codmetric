@@ -1,0 +1,93 @@
+:root{
+  --bg-1: #4b0082;
+  --bg-2: #7b2cbf;
+  --card-bg: rgba(255,255,255,0.06);
+  --accent: #ffd166;
+  --muted: rgba(255,255,255,0.85);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color:var(--muted);
+  background: linear-gradient(180deg,var(--bg-1),var(--bg-2));
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.container{
+  max-width:1000px;
+  margin:0 auto;
+  padding:24px;
+}
+.site-header{
+  padding:36px 0 12px;
+  text-align:center;
+}
+.site-title{
+  margin:0;
+  font-size:clamp(1.6rem,3vw,2.6rem);
+  font-weight:700;
+  color:#fff;
+}
+.site-subtitle{
+  margin:8px 0 0;
+  color:rgba(255,255,255,0.9);
+  font-weight:300;
+}
+.recipes-nav ul{display:flex;gap:12px;list-style:none;padding:0;margin:0 0 18px}
+.recipes-nav a{color:var(--accent);text-decoration:none;font-weight:600}
+
+.recipes-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:20px;
+}
+
+.recipe-card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), transparent);
+  border-radius:12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+}
+
+.recipe-card figure{margin:0}
+.recipe-card .recipe-image{width:100%;height:200px;object-fit:cover;display:block}
+.card-body{padding:14px;display:flex;flex-direction:column;gap:10px}
+.recipe-card h2{margin:0;font-size:1.15rem}
+.meta{color:rgba(255,255,255,0.85);font-size:0.95rem}
+.meta{
+  margin-bottom:12px;
+  color:rgba(255,255,255,0.85);
+}
+.ingredients, .instructions, .notes{
+  background:var(--card-bg);
+  padding:10px;
+  border-radius:8px;
+}
+.ingredients h2, .instructions h2{margin-top:0}
+.ingredients ul{
+  margin:8px 0 0 18px;
+}
+.instructions ol{margin:8px 0 0 18px}
+.recipe h2{color:#fff}
+.site-footer{
+  text-align:center;
+  padding:24px 0 48px;
+  color:rgba(255,255,255,0.8);
+}
+
+/* Responsive */
+@media (max-width: 1000px){
+  .recipes-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media (max-width: 640px){
+  .recipes-grid{grid-template-columns:1fr}
+}
+
+@media (max-width:480px){
+  .container{padding:12px}
+  .site-title{font-size:1.25rem}
+}
