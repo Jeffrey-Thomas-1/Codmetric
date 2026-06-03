@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="card">
+      <header class="header">
+        <p class="eyebrow">Quiz Application</p>
+        <h1>Simple Quiz</h1>
+        <p class="subtitle">Answer five questions and get instant feedback as you go.</p>
+      </header>
+
+      <section class="quiz" aria-live="polite">
+        <div class="progress-row">
+          <span id="questionCounter">Question 1 of 5</span>
+          <span id="scoreCounter">Score: 0</span>
+        </div>
+
+        <h2 id="questionText"></h2>
+        <div id="answers" class="answers"></div>
+
+        <div class="actions">
+          <button id="nextBtn" type="button" disabled>Next</button>
+          <button id="restartBtn" type="button" class="secondary hidden">Restart</button>
+        </div>
+
+        <p id="feedback" class="feedback"></p>
+      </section>
+
+      <section id="results" class="results hidden" aria-live="polite"></section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
