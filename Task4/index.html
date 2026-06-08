@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Visiting Japan</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title">Visiting Japan</h1>
+      <nav class="nav">
+        <a href="#posts">Posts</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero-inner">
+        <h2>Discover temples, streets, and seasons.</h2>
+        <p>Personal stories, striking photography, and tips for exploring Japan.</p>
+      </div>
+    </section>
+
+    <section id="posts" class="container posts">
+      <h2>Latest Stories</h2>
+
+      <article class="post">
+        <figure>
+          <img src="assets/images/japan/Torii Gate.jpg" alt="Torii gate at a shrine">
+          <figcaption class="caption">Torii gate near a shrine</figcaption>
+        </figure>
+        <div class="post-content">
+          <h3>Peaceful walks</h3>
+          <p>Wandering peaceful temple gardens before the day crowds arrive — a morning ritual that reveals a quieter, softer side of the city.</p>
+          <a class="btn" href="posts/kyoto.html">Read more</a>
+        </div>
+      </article>
+
+      <article class="post">
+        <figure>
+          <img src="assets/images/japan/Restaurents.jpg" alt="Nighttime restaurants and stalls">
+          <figcaption class="caption">Nighttime food stalls and restaurants</figcaption>
+        </figure>
+        <div class="post-content">
+          <h3>Street Restaurents</h3>
+          <p>Late-night alleys full of food stalls and small izakayas — a guide to tasting the city after dark.</p>
+          <a class="btn" href="posts/tokyo.html">Read more</a>
+        </div>
+      </article>
+
+      <article class="post">
+        <figure>
+          <img src="assets/images/japan/CHerry Blossom.jpg" alt="Cherry blossoms near viewpoint">
+          <figcaption class="caption">Cherry blossoms near a viewpoint</figcaption>
+        </figure>
+        <div class="post-content">
+          <h3>Cherry Blossom</h3>
+          <p>Clear mornings reveal Mount Fuji's perfect cone — the best spots for sunrise reflections and quiet hikes nearby.</p>
+          <a class="btn" href="posts/fuji.html">Read more</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="gallery" class="container gallery">
+      <h2>Photo Gallery</h2>
+      <div class="grid">
+        <div class="grid-item"><img src="assets/images/japan/CHerry Blossom.jpg" alt="gallery photo 1"></div>
+        <div class="grid-item"><img src="assets/images/japan/Torii Gate.jpg" alt="gallery photo 2"></div>
+        <div class="grid-item"><img src="assets/images/japan/Fireworks.jpg" alt="gallery photo 3"></div>
+        <div class="grid-item"><img src="assets/images/japan/Restaurents.jpg" alt="gallery photo 4"></div>
+        <div class="grid-item"><img src="assets/images/japan/Sidewalks.jpg" alt="gallery photo 5"></div>
+        <div class="grid-item"><img src="assets/images/japan/Mount Fuji.jpg" alt="Mount Fuji gallery photo"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Contact</h2>
+      <form id="contactForm">
+        <label for="name">Name</label>
+        <input id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button class="btn primary" type="submit">Send Message</button>
+        <p class="form-status" id="formStatus" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Visiting Japan — All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
